@@ -1,0 +1,10 @@
+<h1>
+  Welcome
+</h1>
+<nav>
+  <a routerLink="/admin" routerLinkActive="active">Admin</a>
+  <a *ngIf="!userService.isLoggedIn()" routerLink="/login" routerLinkActive="active">Login</a>
+  <a *ngIf="userService.isLoggedIn()" (click)="logout()">Logout</a>
+  <a routerLink="" routerLinkActive="active">Home</a>
+</nav>
+<router-outlet></router-outlet>
